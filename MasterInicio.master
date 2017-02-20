@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterInicio.master.cs" Inherits="MasterInicio" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Estilocss.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="menu">
+        <Items>
+            <asp:MenuItem  Text="Inicio " NavigateUrl="Default.aspx"  ></asp:MenuItem>
+            <asp:MenuItem Text="Registro" NavigateUrl="Registro.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Inicio Sesion" NavigateUrl="InicioS.aspx"  ></asp:MenuItem>
+        </Items> 
+    </asp:Menu>  
+            
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

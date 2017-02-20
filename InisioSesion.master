@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="InisioSesion.master.cs" Inherits="InisioSesion" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Estilocss.css" rel="stylesheet" />
+     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title></title>
+   
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div runat="server" id="menu_administrador" visible="false">
+             <asp:Menu ID="menu" runat="server" Orientation="Horizontal" CssClass="menu">
+        <Items>
+            <asp:MenuItem  Text="Inicio " NavigateUrl="Sesion.aspx"  ></asp:MenuItem>
+            <asp:MenuItem Text="Foros " NavigateUrl="Foro.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Mantenedores" NavigateUrl="Mantenedores.aspx" Value="mantenedor"></asp:MenuItem>
+            <asp:MenuItem Text="Cerrar Sesion" NavigateUrl="CierraS.aspx"  ></asp:MenuItem>
+        </Items> 
+            </asp:Menu>
+        </div>
+        <div runat="server" id="menu_usuario" visible="false">
+             <asp:Menu ID="menu1" runat="server" Orientation="Horizontal" CssClass="menu">
+        <Items>
+            <asp:MenuItem  Text="Inicio " NavigateUrl="SesionAdm.aspx"  ></asp:MenuItem>
+            <asp:MenuItem Text="Foros " NavigateUrl="Foro.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Cerrar Sesion" NavigateUrl="CierraS.aspx"  ></asp:MenuItem>
+        </Items> 
+            </asp:Menu>
+        </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+           
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
